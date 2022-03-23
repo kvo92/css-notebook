@@ -1,0 +1,90 @@
+li:hover {
+  background: red;
+}
+
+input:focus {
+  background: red;
+}
+
+input:required {
+  background: red;
+}
+
+/* for checkboxes */
+input:checked {
+  margin: 50px;
+}
+
+imput:disabled {
+  margin: 50px;
+}
+
+/* selection by order */
+li:first-child {
+  background: red;
+}
+
+li:last-child {
+  background: red;
+}
+
+/* every even element */
+li:nth-child(2n) {
+  background: red;
+}
+/* every odd element */
+li:nth-child(2n-1) {
+  background: red;
+}
+/* every third element */
+li:nth-child(3n) {
+  background: red;
+}
+
+span:only-child {
+  background: red;
+}
+
+/* not */
+/* any li element without the green class */
+li:not(.green) {
+  background: red;
+}
+
+/* pseudo elements */
+div.red::before {
+  content: "Before";
+  background: red;
+}
+
+div.red::after {
+  content: "After";
+  background: red;
+}
+
+/* data attribute */
+[data-red] {
+  background: red;
+}
+
+[data-red="true"] {
+  background: red;
+}
+
+/* starts with */
+[data-red^="12"] {
+  /* match with 1234 */
+  background: red;
+}
+
+/* ends with */
+[data-red^="34"] {
+  /* match with 1234 */
+  background: red;
+}
+
+/* any with */
+[data-red*="34"] {
+  /* match with 1234 */
+  background: red;
+}

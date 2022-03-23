@@ -1,0 +1,55 @@
+body {
+  background-color: grey;
+}
+.grid-container {
+  display: grid;
+  /* fr = fracrion */
+  /* 2 columns first is twice the size */
+  grid-template-columns: 2fr 1fr;
+
+  /* grid-template-rows decides how big each row is */
+  /* grid-template-rows: 20px 150px; */
+  /* grid-auto-rows any row that wasn't has their height set will be set by this  */
+  /* grid-auto-rows: 50px; */
+  grid-auto-rows: minmax(10px, auto);
+  /* 4 column, 100 px each */
+  /* grid-template-columns: repeat(4, 100px); */
+
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+
+  /* or */
+  grid-gap: 20px;
+  justify-content: start;
+  align-content: stretch;
+  height: 100vh;
+}
+
+.grid-item {
+  background-color: lightblue;
+  color: white;
+  border: solid 1px white;
+}
+
+/* span the whole row */
+.grid-item-1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  /*  grid-column-end: -1;  */
+
+  /* shortcut */
+  grid-column: 1/-1;
+}
+
+/* span 2 rows */
+.grid-item-2 {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  /* overwrite stretch */
+  align-self: start;
+  justify-self: center;
+}
+/* span 2 rows */
+.grid-item-3 {
+  grid-row: span 3;
+}

@@ -1,0 +1,59 @@
+.flexbox-container {
+  display: flex;
+  /* justify-content:
+    flex-start: (starting from the start of Main axis) ,
+    center: (center to the middle of y axis),
+    space-between: (split space evenly in between boxes),
+    space-arround: (split space evenly everywhere)
+    */
+  /* drop box to new line when shrink browser */
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  /* align-items:
+    stretch: is the default behavior, smaller items are stretched to be same size with other
+    flex-start: reserve size of the items, and align on the top size of main axis
+    center: aligned center x axis
+  */
+  align-items: center;
+}
+.flexbox-container-v {
+  display: flex;
+  flex-direction: column;
+  /* justify-content:
+    flex-start: (starting from the start of Main axis) ,
+    center: (center to the middle of y axis),
+    space-between: (split space evenly in between boxes),
+    space-arround: (split space evenly everywhere)
+    */
+  justify-content: center;
+  align-items: center;
+}
+
+.flexbox-item {
+  width: 200px;
+  margin: 10px;
+  border: 3px solid #333;
+  background-color: #dfdfdf;
+}
+
+.flexbox-item-1 {
+  min-height: 100px;
+  /* prevents shrinking */
+  flex-shrink: 0;
+  align-self: flex-end;
+  order: 3;
+}
+.flexbox-item-2 {
+  min-height: 200px;
+  /* use flex basis to actually get twice the size of flexbox */
+  flex-grow: 2;
+  flex-basis: 0;
+  align-self: center;
+  order: 1;
+}
+.flexbox-item-3 {
+  min-height: 300px;
+  /* grow to occupy the free space */
+  flex-grow: 1;
+  flex-basis: 0;
+}

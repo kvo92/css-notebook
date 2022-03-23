@@ -1,0 +1,34 @@
+.parent {
+  padding: 10px;
+  background-color: lightblue;
+  position: relative;
+  height: 200vh;
+}
+
+/* relative take element out of the flow */
+/* .child-one {
+  background-color: lightgreen;
+  position: relative;
+  left: 10px;
+} */
+
+/* absolute element will be ignored removed from the flow*/
+.child-one {
+  background-color: lightgreen;
+  position: absolute;
+  /* because parent is relative, now this absolute element will position within parent */
+  top: 0px;
+}
+/* fixed moved with scroll */
+.child-two {
+  background-color: lightsalmon;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+}
+
+.child-three {
+  position: sticky;
+  background-color: lightpink;
+  top: 0px;
+}

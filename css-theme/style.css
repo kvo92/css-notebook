@@ -1,0 +1,31 @@
+:root {
+  --div-background-color: red;
+  --text-color: white;
+  --div-padding: 10px;
+  --div-margin: 10px;
+}
+
+.child {
+  background-color: var(--div-background-color);
+  color: var(--text-color);
+}
+
+body {
+  /* pink is fall back */
+  background-color: var(--background-color, pink);
+}
+
+.one {
+  --div-background-color: blue;
+  --text-color: black;
+}
+
+.one-one {
+  margin: var(--div-margin);
+  padding: var(--div-margin);
+}
+
+.one-two {
+  margin: var(--div-margin);
+  padding: var(--div-margin);
+}
