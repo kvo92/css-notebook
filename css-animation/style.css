@@ -1,0 +1,50 @@
+.parent {
+  background-color: hsla(200, 100%, 20%);
+  height: 400px;
+  width: 400px;
+}
+.child {
+  background-color: red;
+  height: 50%;
+  width: 50%;
+  transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  transition: transform 1s ease-in;
+  animation: left-to-right 1s ease-in forwards infinite alternate;
+}
+
+.parent:hover .child {
+  animation-play-state: paused;
+}
+
+/* .child {
+  background-color: red;
+  height: 50%;
+  width: 50%;
+  transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  transition: transform 1s ease-in;
+}
+
+.parent:hover .child {
+  animation: left-to-right 1s ease-in forwards infinite alternate;
+} */
+/* alternate is going in reverse */
+/* inifite is playing in a loop */
+/*left-to-right is customized name, forward keep, 
+  ( animation: left-to-right 1s ease-in forwards 3 alternate;) 3 is how many times*/
+
+@keyframes left-to-right {
+  0% {
+    background-color: red;
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateY(100%);
+  }
+  66% {
+    transform: translateX(100%) translateY(100%);
+  }
+  100% {
+    background-color: green;
+    transform: translateX(100%);
+  }
+}

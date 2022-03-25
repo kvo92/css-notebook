@@ -1,0 +1,50 @@
+div {
+  background-color: hsl(200, 70%, 30%);
+  width: 100px;
+  height: 100px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin: auto;
+  margin-top: 100px;
+  position: relative;
+}
+
+div {
+  transform: rotate(74deg);
+  transform: rotate(0.25turn);
+  transform: rotateX(0.15turn);
+  transform: scale(1.5);
+  transform: scale(1.5, 2);
+}
+
+div {
+  transform: translate(100px);
+  transform: translate(-100px);
+  /* move to the  right the same width amount as object*/
+  transform: translate(100%);
+  transform: skew(30deg);
+  transform: skew(30deg, -40deg);
+
+  /* mutiple transform */
+  transform: skew(30deg, -40deg) rotateX(0.15turn);
+
+  /* using vars to override */
+  transform: scale(var(--scale, 1.2));
+  /* 1.2 is the default value */
+}
+
+div {
+  --scale: 5;
+}
+
+div::after {
+  content: "After";
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
