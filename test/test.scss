@@ -1,0 +1,186 @@
+.simple-calendar {
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+    position: relative;
+    top: var(--margin1);
+    border: none;
+    box-shadow: 0px 0px 52px -18px rgba(0, 0, 0, 0.75);
+  }
+  margin: var(--margin2);
+
+  td {
+    &:hover {
+      background-color: var(--primary-color2);
+    }
+  }
+  th {
+    color: white;
+    background-color: var(--primary-color5);
+    &:first-child {
+      border-radius: 6px 0 0 0;
+    }
+    &:last-child {
+      border-radius: 0 6px 0 0;
+    }
+    &:only-child {
+      border-radius: 6px 6px 0 0;
+    }
+  }
+
+  tr:last-child td:first-child {
+    border-bottom-left-radius: 6px;
+  }
+  tr:last-child td:last-child {
+    border-bottom-right-radius: 6px;
+  }
+
+  .calendar-heading {
+    text-align: center;
+  }
+  .calendar-heading a:first-child {
+    visibility: hidden;
+  }
+  .calendar-heading a:first-child:after {
+    border-radius: 5px 5px 5px 5px;
+    padding: var(--padding0);
+    visibility: visible;
+    background-color: var(--primary-color4);
+    color: white;
+    content: "<<";
+  }
+
+  .calendar-heading a:last-child {
+    visibility: hidden;
+  }
+
+  .calendar-heading a:last-child::before {
+    border-radius: 5px 5px 5px 5px;
+    padding: var(--padding0);
+    visibility: visible;
+    background-color: var(--primary-color4);
+    color: white;
+    content: ">>";
+  }
+  .calendar-title {
+    font-weight: bold;
+  }
+  .day {
+  }
+
+  .wday-0 {
+  }
+  .wday-1 {
+  }
+  .wday-2 {
+  }
+  .wday-3 {
+  }
+  .wday-4 {
+  }
+  .wday-5 {
+  }
+  .wday-6 {
+  }
+
+  .today {
+    background-color: var(--primary-color1);
+  }
+  .past {
+  }
+  .future {
+  }
+
+  .start-date {
+  }
+
+  .prev-month {
+    color: #777;
+  }
+  .next-month {
+  }
+  .current-month {
+  }
+
+  .has-events {
+  }
+
+  [data-tooltip] {
+    position: relative;
+    &:hover::after {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      margin-top: 5px;
+      padding: 5px;
+      background-color: lightgray;
+      content: attr(data-tooltip);
+    }
+  }
+}
+
+.day-calendar {
+  max-width: 500px;
+  margin: 0 auto;
+  td {
+    &:hover {
+      background-color: white;
+    }
+  }
+  th {
+    text-align: center;
+  }
+  .day {
+    height: 70vh;
+  }
+  .today {
+    background-color: white;
+  }
+  .event {
+    padding: var(--padding1);
+    box-shadow: 0px 0px 35px -16px rgba(0, 0, 0, 0.55);
+    &:first-child {
+      margin-top: var(--margin1);
+    }
+  }
+}
+.btn-group-container {
+  position: absolute;
+  top: var(--margin0);
+  right: var(--margin0);
+
+  .btn-view-group {
+    button {
+      &:first-child {
+        border-radius: 5px 0 0 5px;
+      }
+      &:last-child {
+        border-radius: 0 5px 5px 0;
+      }
+      padding-right: 0;
+      background-color: var(--primary-color5); /* Green background */
+      border: 1px solid var(--primary-color4); /* Green border */
+      color: white; /* White text */
+      padding: 5px 15px; /* Some padding */
+      cursor: pointer; /* Pointer/hand icon */
+      float: left; /* Float the buttons side by side */
+      /* Clear floats (clearfix hack) */
+      &:after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      &.active {
+        background-color: var(--primary-color4);
+      }
+      /* Add a background color on hover */
+      &:hover {
+        background-color: var(--primary-color4);
+      }
+    }
+    &button:not(:last-child) {
+      border-right: none; /* Prevent double borders */
+    }
+  }
+}
